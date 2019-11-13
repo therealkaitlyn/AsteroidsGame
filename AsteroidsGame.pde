@@ -9,12 +9,35 @@ public void setup()
 public void draw() 
 {
   //your code here
-  
+  background(255);
   k.show();
+  k.move();
 
 }
 public void keyPressed()
 {
-	
+	if(keyCode == 'W')
+	{
+		k.accelerate(.5);
+	}
+	if(keyCode == 'A')
+	{
+		k.turn(10);
+	}
+	if(keyCode == 'S')
+	{
+		k.accelerate(-.5);
+	}
+	if(keyCode == 'D')
+	{
+		k.turn(-10);
+	}
+	if(keyCode == 'H')
+	{
+		k.setCenterX((Math.random()*700)+1);
+		k.setCenterY((Math.random()*700)+1);
+		k.setDirectionX(0);
+		k.setDirectionY(0);
+	}
 }
 
