@@ -3,7 +3,7 @@ class Spaceship extends Floater
 	
     public Spaceship()
     {
-    	fill(0);
+    	myColor = color(255,255,255);
     	corners=3;
     	xCorners = new int[] {-8,16,-8};
     	yCorners = new int[]{-8,0,8};
@@ -29,6 +29,10 @@ class Spaceship extends Floater
     public void setDirectionX(double xOne)
     {
     	myDirectionX=xOne;
+    }
+    public void setPointDirection(double poinT)
+    {
+        myPointDirection=poinT;
     }
     
 }
