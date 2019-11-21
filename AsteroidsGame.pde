@@ -1,5 +1,6 @@
 //your variable declarations here
 Spaceship k;
+Asteroid j;
 Star[] t = new Star[150];
 public void setup() 
 {
@@ -10,18 +11,23 @@ public void setup()
   	t[i] = new Star();
   }
   k = new Spaceship();
+  j = new Asteroid();
 
 }
 public void draw() 
 {
   //your code here
   background(0);
+  fill(255);
   for (int i=0; i< t.length; i++)
   {
   	t[i].show();
   }
   k.show();
   k.move();
+  j.show();
+  j.move();
+
 
 }
 public void keyPressed()
