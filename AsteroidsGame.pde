@@ -1,6 +1,6 @@
 //your variable declarations here
 Spaceship k;
-Asteroid j;
+ArrayList <Asteroid> j = new ArrayList <Asteroid>();
 Star[] t = new Star[150];
 public void setup() 
 {
@@ -10,9 +10,12 @@ public void setup()
   {
   	t[i] = new Star();
   }
+  
+  for (int i=0; i< 50; i++)
+  {
+  	j.add(new Asteroid());
+  }
   k = new Spaceship();
-  j = new Asteroid();
-
 }
 public void draw() 
 {
@@ -25,8 +28,16 @@ public void draw()
   }
   k.show();
   k.move();
-  j.show();
-  j.move();
+  for (int i=0; i< j.size(); i++)
+  {
+  	j.get(i).show();
+  	j.get(i).move();
+  	if(dist((float)(j.get(i).getmyCenterX()), (float)(j.get(i).getmyCenterY()),(float)(k.getmyCenterX()), (float)(k.getmyCenterY()))< 20){
+  		j.remove(j.get(i));
+  	}
+  		
+  }
+  
 
 
 }
