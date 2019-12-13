@@ -34,4 +34,12 @@ class Bullet extends Floater
     {
     	myDirectionX=xOne;
     }
+    public double getmyCenterY()
+    {
+        return myCenterY;
+    }
+    public double getmyCenterX()
+    {
+        return myCenterX;
+    }
 }
